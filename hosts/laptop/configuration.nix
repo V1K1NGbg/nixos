@@ -114,6 +114,7 @@
     jdk
     jdk8
     discord
+    git
     xorg.xrandr
   ];
 

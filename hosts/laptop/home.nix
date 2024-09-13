@@ -75,11 +75,11 @@
     # EDITOR = "emacs";
   };
 
-  # programs.git = {
-  #   enable = true;
-  #   userName  = "V1K1NGbg";
-  #   userEmail = "victor@ilchev.com";
-  # };
+  programs.git = {
+    enable = true;
+    userName  = "V1K1NGbg";
+    userEmail = "victor@ilchev.com";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
