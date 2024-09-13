@@ -59,14 +59,14 @@
 
       xrandrHeads = [
         {
-          output = "DP-4";
+          output = "DP-3";
           monitorConfig = ''
             Option "Primary" "true"
             Option "PreferredMode" "2560x1440"
           '';
         }
         {
-          output = "eDP-2";
+          output = "eDP-1";
           monitorConfig = ''
             Option "PreferredMode" "2560x1440"
           '';
