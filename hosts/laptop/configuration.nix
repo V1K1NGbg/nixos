@@ -62,13 +62,13 @@
           output = "DP-4";
           monitorConfig = ''
             Option "Primary" "true"
-            Option "PreferredMode" "2560x1440_144.00"
+            Option "PreferredMode" "2560x1440"
           '';
         }
         {
           output = "eDP-2";
           monitorConfig = ''
-            Option "PreferredMode" "1920x1080_240.00"
+            Option "PreferredMode" "1920x1080_85.00"
           '';
 
           # monitorConfig = ''
