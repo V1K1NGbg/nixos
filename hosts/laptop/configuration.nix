@@ -57,21 +57,21 @@
         ];
       };
 
-      # xrandrHeads = [
-      #   {
-      #     output = "DP-4";
-      #     monitorConfig = ''
-      #       Option "Primary" "true"
-      #       Option "PreferredMode" "2560x1440"
-      #     '';
-      #   }
-      #   {
-      #     output = "eDP-2";
-      #     monitorConfig = ''
-      #       Option "PreferredMode" "2560x1440"
-      #     '';
-      #   }
-      # ];
+      xrandrHeads = [
+        {
+          output = "DP-[0-4]";
+          monitorConfig = ''
+            Option "Primary" "true"
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+        {
+          output = "eDP-[1-2]";
+          monitorConfig = ''
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+      ];
 
       xkb = {
         layout = "us";
@@ -116,7 +116,7 @@
     discord
     git
     cryptsetup
-    # xorg.xrandr
+    xorg.xrandr
   ];
 
 
