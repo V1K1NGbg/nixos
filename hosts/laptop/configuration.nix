@@ -31,7 +31,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-qqqqqqqq
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -57,21 +57,21 @@ qqqqqqqq
         ];
       };
 
-      xrandrHeads = [
-        {
-          output = "DP-3";
-          monitorConfig = ''
-            Option "Primary" "true"
-            Option "PreferredMode" "2560x1440"
-          '';
-        }
-        {
-          output = "eDP-1";
-          monitorConfig = ''
-            Option "PreferredMode" "2560x1440"
-          '';
-        }
-      ];
+      # xrandrHeads = [
+      #   {
+      #     output = "DP-3";
+      #     monitorConfig = ''
+      #       Option "Primary" "true"
+      #       Option "PreferredMode" "2560x1440"
+      #     '';
+      #   }
+      #   {
+      #     output = "eDP-1";
+      #     monitorConfig = ''
+      #       Option "PreferredMode" "2560x1440"
+      #     '';
+      #   }
+      # ];
 
       xkb = {
         layout = "us";
@@ -116,7 +116,7 @@ qqqqqqqq
     discord
     git
     cryptsetup
-    xorg.xrandr
+    # xorg.xrandr
   ];
 
 
