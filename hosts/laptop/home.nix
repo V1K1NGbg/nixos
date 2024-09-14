@@ -88,19 +88,19 @@
             DP-1 = home;
           };
           config = {
-            eDP-1 = {
-              enable = true;
-              primary = false;
-              position = "2560x0";
-              mode = "2560x1440";
-              # rate = "240.00";
-            };
             DP-1 = {
               enable = true;
               primary = true;
               position = "0x0";
-              mode = "2560x1440";
-              # rate = "144.00";
+              # mode = "2560x1440";
+              # rate = "60.00";
+            };
+            eDP-1 = {
+              enable = true;
+              primary = false;
+              position = "2560x0";
+              # mode = "2560x1440";
+              # rate = "60.00";
             };
           };
         };
