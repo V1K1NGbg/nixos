@@ -59,6 +59,20 @@
 
       xrandrHeads = [
         {
+          output = "DP-1";
+          monitorConfig = ''
+            Option "Primary" "true"
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+        {
+          output = "DP-2";
+          monitorConfig = ''
+            Option "Primary" "true"
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+        {
           output = "DP-3";
           monitorConfig = ''
             Option "Primary" "true"
@@ -66,7 +80,20 @@
           '';
         }
         {
+          output = "DP-4";
+          monitorConfig = ''
+            Option "Primary" "true"
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+        {
           output = "eDP-1";
+          monitorConfig = ''
+            Option "PreferredMode" "2560x1440"
+          '';
+        }
+        {
+          output = "eDP-2";
           monitorConfig = ''
             Option "PreferredMode" "2560x1440"
           '';
