@@ -90,14 +90,13 @@
   #         config = {
   #           DP-1 = {
   #             enable = true;
-  #             primary = true;
+  #             # primary = true;
   #             # position = "0x0";
   #             # mode = "2560x1440";
   #             # rate = "60.00";
   #           };
   #           eDP-1 = {
   #             enable = true;
-  #             primary = false;
   #             # position = "2560x0";
   #             # mode = "2560x1440";
   #             # rate = "60.00";
