@@ -73,6 +73,8 @@
       sddm.enable = true;
       defaultSession = "none+awesome";
     }; 
+
+    blueman.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -82,6 +84,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
