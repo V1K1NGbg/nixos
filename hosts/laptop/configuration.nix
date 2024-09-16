@@ -85,6 +85,8 @@
     packages = with pkgs; [];
   };
 
+  powerManagement.cpuFreqGovernor = "powersave";
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
