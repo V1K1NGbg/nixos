@@ -98,8 +98,8 @@
   environment.systemPackages = with pkgs; [
     arandr
     bash-completion
-    # blueman
-    # blueman-applet
+    # blueman (not needed?)
+    # blueman-applet (not needed?)
     # bluez (can't figure out)
     # bluez-utils (can't figure out)
     brightnessctl
@@ -125,7 +125,7 @@
     nano
     nemo
     neofetch
-    networkmanagerapplet
+    # networkmanagerapplet
     parsec-bin
     pcloud
     prismlauncher
@@ -135,11 +135,15 @@
     spotify
     tmux
     tree
+    unzip
     vim
     vscode-fhs
     # vmware-workstation (maybe)
     wget
+    zip
   ];
+
+  programs.nm-applet.enable = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
