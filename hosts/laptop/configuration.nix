@@ -96,17 +96,49 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
-    neofetch
-    gnome-terminal
-    firefox
-    networkmanagerapplet
-    vscode-fhs
-    jdk
-    jdk8
+    arandr
+    bash-completion
+    # blueman
+    # blueman-applet
+    # bluez (can't figure out)
+    # bluez-utils (can't figure out)
+    brightnessctl
+    capitaine-cursors
+    neo-cowsay
+    # cpupower-gui-git (not needed)
+    # cryptsetup (I need to be watched because I am retarded)
+    curl
     discord
+    docker
+    firefox
+    fzf
+    gimp
     git
-    cryptsetup
+    gh
+    gnome-terminal
+    htop
+    jdk8
+    jdk17
+    jdk22
+    keepassxc
+    lolcat
+    nano
+    nemo
+    neofetch
+    networkmanagerapplet
+    parsec-bin
+    pcloud
+    prismlauncher
+    ranger
+    remmina
+    fusuma
+    spotify
+    tmux
+    tree
+    vim
+    vscode-fhs
+    # vmware-workstation (maybe)
+    wget
   ];
 
 
