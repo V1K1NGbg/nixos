@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, outputs, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -122,6 +123,7 @@
     jdk17
     jdk22
     keepassxc
+    killall
     lolcat
     nano
     nemo
@@ -146,6 +148,12 @@
 
   programs.nm-applet.enable = true;
 
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      victor = import ./home.nix;
+    };
+  };
 
   programs.nix-ld = {
     enable = true;

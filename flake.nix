@@ -11,22 +11,22 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
   let
     inherit (self) outputs;
 
-    # system = "x86_64-linux";
+    system = "x86_64-linux";
     
     # pkgs = nixpkgs.legacyPackages.${system};
-    #pkgs = import nixpkgs {
-    #    inherit system;
-    #    config.allowUnfree = true;
-    #};
+    pkgs = import nixpkgs {
+       inherit system;
+       config.allowUnfree = true;
+    };
 
-    #stable = import nixpkgs-stable {
-    #    inherit system;
-    #    config.allowUnfree = true;
-    #};
+    stable = import nixpkgs-stable {
+       inherit system;
+       config.allowUnfree = true;
+    };
   in
   {
     nixosConfigurations = {
@@ -36,14 +36,6 @@
         modules = [
           ./hosts/nixosbtw/configuration.nix
         ];
-      };
-    };
-
-    homeConfigurations = {
-      "victor@nixosbtw" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./hosts/nixosbtw/home.nix];
       };
     };
   };
