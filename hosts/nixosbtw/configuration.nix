@@ -16,7 +16,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixosbtw"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -75,6 +75,8 @@
     }; 
 
     blueman.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -82,7 +84,6 @@
     isNormalUser = true;
     description = "victor";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   powerManagement.cpuFreqGovernor = "powersave";
@@ -98,7 +99,7 @@
   environment.systemPackages = with pkgs; [
     arandr
     bash-completion
-    # blueman (not needed?)
+    blueman
     # blueman-applet (not needed?)
     # bluez (can't figure out)
     # bluez-utils (can't figure out)
@@ -145,6 +146,19 @@
 
   programs.nm-applet.enable = true;
 
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      xorg.libXtst
+      xorg.libXext
+      xorg.libX11
+      xorg.libXrender
+      xorg.libXi
+      xorg.libXft
+      fontconfig
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -1,1 +1,1 @@
-sudo nixos-rebuild switch --flake ~/Documents/nixos/#laptop
+sudo nixos-rebuild switch --flake ~/Documents/nixos/#nixosbtw
