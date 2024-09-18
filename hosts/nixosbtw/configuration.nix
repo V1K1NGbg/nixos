@@ -83,7 +83,7 @@
          jack.enable = true;
       };
 
-      # blueman.enable = true;
+      blueman.enable = true;
       gvfs.enable = true;
       udisks2.enable = true;
    };
@@ -156,6 +156,7 @@
       vscode-fhs
       # vmware-workstation (maybe)
       wget
+      
       zip
    ];
 

@@ -16,7 +16,6 @@
       inherit (self) outputs;
 
       system = "x86_64-linux";
-      
    in
    {
       nixosConfigurations = {
