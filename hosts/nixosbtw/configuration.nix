@@ -156,7 +156,6 @@
       vscode-fhs
       # vmware-workstation (maybe)
       wget
-      
       zip
    ];
 
