@@ -75,7 +75,15 @@
          defaultSession = "none+awesome";
       }; 
 
-      blueman.enable = true;
+      pipewire = {
+         enable = true;
+         alsa.enable = true;
+         alsa.support32Bit = true;
+         pulse.enable = true;
+         jack.enable = true;
+      };
+
+      # blueman.enable = true;
       gvfs.enable = true;
       udisks2.enable = true;
    };
@@ -86,6 +94,10 @@
       description = "victor";
       extraGroups = [ "networkmanager" "wheel" ];
    };
+
+   security.rtkit.enable = true;
+
+   # programs.nm-applet.enable = true;
 
    powerManagement.cpuFreqGovernor = "powersave";
 
@@ -128,6 +140,8 @@
       nano
       nemo
       neofetch
+      # networkmanagerapplet
+      nodejs
       parsec-bin
       pcloud
       prismlauncher
