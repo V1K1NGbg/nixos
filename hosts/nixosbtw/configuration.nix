@@ -9,6 +9,7 @@
       [ # Include the results of the hardware scan.
          ./hardware-configuration.nix
          inputs.home-manager.nixosModules.home-manager
+         # ./../../modules/nixos/nvidia.nix
       ];
 
    nix.settings.experimental-features = [ "nix-command" "flakes" ];
