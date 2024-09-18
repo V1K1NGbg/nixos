@@ -128,7 +128,6 @@
       nano
       nemo
       neofetch
-      # networkmanagerapplet
       parsec-bin
       pcloud
       prismlauncher
@@ -145,8 +144,6 @@
       wget
       zip
    ];
-
-   # programs.nm-applet.enable = true;
 
    home-manager = {
       extraSpecialArgs = { inherit inputs outputs; };

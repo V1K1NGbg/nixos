@@ -71,8 +71,6 @@
       # EDITOR = "emacs";
    };
 
-   services.blueman-applet.enable = true;
-
    programs.git = {
       enable = true;
       userName  = "V1K1NGbg";
